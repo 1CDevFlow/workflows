@@ -40,7 +40,8 @@ jobs:
       uses: sonarsource/sonarqube-scan-action@v8.4.0
       env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          LC_ALL: "ru_RU.UTF-8"
+          LANG: "C.UTF-8"
+          LC_ALL: "C.UTF-8"
       with:
         args: >
           -Dsonar.host.url=https://sonar.openbsl.ru
@@ -56,6 +57,8 @@ jobs:
       uses: sonarsource/sonarqube-scan-action@v8.4.0
       env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          LANG: "C.UTF-8"
+          LC_ALL: "C.UTF-8"
       with:
         args: >
           -Dsonar.host.url=https://sonar.openbsl.ru
